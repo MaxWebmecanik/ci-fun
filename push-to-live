@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+export GIT_DIR=tiny-repo/.git
+export GIT_WORK_TREE=tiny-repo
+export GIT_SSH_COMMAND="ssh -i .vagrant/machines/default/virtualbox/private_key \
+                            -o UserKnownHostsFile=/dev/null \
+                            -o StrictHostKeyChecking=no"
+
+git push ssh://vagrant@localhost:2222/~/ci-fun.git master
