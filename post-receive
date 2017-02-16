@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-sudo su
 
-export GIT_DIR=/home/vagrant/ci-fun.git
-export GIT_WORK_TREE=/usr/share/nginx/html
+sudo su <<-SHELL
+  export GIT_DIR=/home/vagrant/ci-fun.git
+  export GIT_WORK_TREE=/usr/share/nginx/html
 
-git checkout -f
+  git checkout -f
+SHELL
