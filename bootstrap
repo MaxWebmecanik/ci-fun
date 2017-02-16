@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+git submodule update --init tiny-repo
+
+export GIT_DIR=tiny-repo/.git
+
+git remote add live ssh://vagrant@localhost:2222/~/ci-fun.git
