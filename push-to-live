@@ -5,4 +5,4 @@ export GIT_SSH_COMMAND="ssh -i .vagrant/machines/default/virtualbox/private_key 
                             -o UserKnownHostsFile=/dev/null \
                             -o StrictHostKeyChecking=no"
 
-git push live master
+git push live symfony

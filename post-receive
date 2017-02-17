@@ -2,7 +2,11 @@
 
 sudo su <<-SHELL
   export GIT_DIR=/home/vagrant/ci-fun.git
-  export GIT_WORK_TREE=/usr/share/nginx/html
+  export GIT_WORK_TREE=/var/www/project
 
-  git checkout -f
+  git checkout -f symfony
+
+  cd /var/www/project
+  export SYMFONY_ENV=prod
+  /usr/local/bin/composer install --no-dev --optimize-autoloader
 SHELL
